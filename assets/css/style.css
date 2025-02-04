@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700&display=swap');
+:root {
+  --primary-color: rgb(45, 164, 233);
+  --primary-color-darker: rgb(20, 73, 83);
+  --secondary-color: #fff;
+  --error-color: #ff2d2d;
+}
+
+* {
+  box-sizing: border-box;
+  outline: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--primary-color);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.2em;
+  line-height: 1.5em;
+  color: black
+}
+
+.container {
+  max-width: 95%;
+  margin: 20px auto;
+  background: var(--secondary-color);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  color: var(--primary-color-darker);
+}
+
+p {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+label {
+  width: 100%;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: var(--primary-color-darker);
+}
+
+input[type="text"] {
+  flex: 1 1 auto;
+  font-size: 1em;
+  height: 40px;
+  padding: 0 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+input[type="text"]:focus {
+  border-color: var(--primary-color);
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1em;
+  font-weight: bold;
+  color: var(--secondary-color);
+  background-color: var(--primary-color-darker);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: var(--primary-color);
+}
+
+.divResposta {
+  margin-top: 20px;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  padding: 10px;
+  background-color: var(--secondary-color);
+}
+
+#listaTarefas {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#listaTarefas li {
+  padding: 10px;
+  margin: 5px 0;
+  background: #f8f8f8;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  word-break: break-all;
+}
+
+.apagar {
+  background-color: var(--error-color);
+  border: none;
+  color: var(--secondary-color);
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  word-break: keep-all;
+}
+
+.apagar:hover {
+ background-color: #d32f2f;
+}
+
+/* Estilos para telas menores */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5em;
+  }
+
+  input[type="text"] {
+    font-size: 0.9em;
+  }
+
+  button {
+    font-size: 0.9em;
+    padding: 8px 15px;
+  }
+
+  #listaTarefas li {
+    font-size: 0.9em;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .apagar {
+    margin-top: 5px;
+    align-self: flex-end;
+  }
+}
